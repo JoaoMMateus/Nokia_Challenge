@@ -8,7 +8,7 @@ function Navbar() {
                 <li><NavLink exact to="/">Home</NavLink></li>
                 <li><NavLink to="/contact">Contact</NavLink></li>
                 <li><NavLink to="/about">About</NavLink></li>
-                <li><NavLink to="/profile/foo">Profile</NavLink></li>
+                {/* <li><NavLink to="/profile/:id">Profile</NavLink></li> */}
             </ul>
         </div>
     )

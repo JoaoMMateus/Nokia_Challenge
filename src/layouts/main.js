@@ -16,7 +16,7 @@ function Main() {
                         <Route exact path="/" component={Home}/>
                         <Route path="/contact" component={Contact}/>
                         <Route path="/about" component={About}/>
-                        <Route path="/profile/:username" component={Profile}/>
+                        <Route path="/profile/:id" component={Profile}/>
                     </Switch>
                 </div>
             </BrowserRouter>
