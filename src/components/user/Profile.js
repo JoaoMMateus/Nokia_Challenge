@@ -1,5 +1,4 @@
-import { useParams } from "react-router";
-import React, { useState, useEffect }  from 'react';
+import React from 'react';
 
 
 const Profile = props =>  {

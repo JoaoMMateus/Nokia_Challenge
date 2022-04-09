@@ -1,24 +1,32 @@
-import Navbar from '../components/navbar/navbar'
-import  { BrowserRouter, HashRouter, Switch, Route } from "react-router-dom";
-import Home from '../components/home/Home'
-import Contact from '../components/contact/Contact'
-import About from '../components/about/About'
-import Profile from '../components/user/Profile'
+import  { BrowserRouter, Switch, Route } from "react-router-dom";
+import {Grid} from '@mui/material'
+
+import Navbar from '../components/navbar'
+import Header from '../components/header'
+import Home from '../components/pages/Home'
+import Tasks from '../components/pages/Tasks'
+
 
 function Main() {
     return (
         <div>
             <BrowserRouter>
-                <Navbar></Navbar>
-                <div className="content">
-                
-                    <Switch>
-                        <Route exact path="/" component={Home}/>
-                        <Route path="/contact" component={Contact}/>
-                        <Route path="/about" component={About}/>
-                        <Route path="/profile/:id" component={Profile}/>
-                    </Switch>
-                </div>
+                <Grid container spacing={0.5}>
+                    <Grid xs={12} md={12} sx={{ borderRight: 1, borderColor: 'divider' }}>
+                        <Header></Header>
+                    </Grid>
+                    <Grid xs={12} md={2} sx={{ borderRight: 1, borderColor: 'divider' }}>
+                        <Navbar></Navbar>
+                    </Grid>
+                    <Grid xs={12} md={10}>
+                        <div className="content">
+                            <Switch>
+                                <Route exact path="/" component={Home}/>
+                                <Route path="/tasks" component={Tasks}/>
+                            </Switch>
+                        </div>
+                    </Grid>
+                </Grid>
             </BrowserRouter>
         </div>
     )
