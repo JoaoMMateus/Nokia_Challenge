@@ -1,25 +1,22 @@
 import * as React from 'react';
-import { NavLink, Link} from "react-router-dom";
+import {Link} from "react-router-dom";
 import Box from '@mui/material/Box';
-import '../components/css/navbar.css';
+import Tabs from '@mui/material/Tabs';
+import Tab from '@mui/material/Tab';
 
-const Navbar = () => {
-    return (
-        <div>
-            <Box sx={{width: '100%', bgcolor: 'background.paper' }}>
-            <nav class="navbar" id="menu">
-                <ul  class="nav">
-                    <li >
-                        <NavLink exact to="/" class="nav-link">Home</NavLink>
-                    </li>
-                    <li >
-                        <NavLink to="/tasks" class="nav-link">Tasks</NavLink>
-                    </li>
-                </ul>
-            </nav>
-            </Box>
-        </div>
-    )
+export default function Navbar() {
+  const [value, setValue] = React.useState(0);
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
+
+  return (
+    <Box sx={{ width: '100%', bgcolor: 'background.paper'}}>
+      <Tabs value={value} onChange={handleChange} aria-label="nav tabs example" orientation='vertical'>
+        <Tab component={Link} label="Home" to="/" />
+        <Tab component={Link} label="Tasks" to="/tasks" />
+      </Tabs>
+    </Box>
+  );
 }
-
-export default Navbar;
