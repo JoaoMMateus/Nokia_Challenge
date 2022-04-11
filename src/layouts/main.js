@@ -1,4 +1,4 @@
-import  { BrowserRouter, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 import {Grid} from '@mui/material'
 
 import Navbar from '../components/navbar'

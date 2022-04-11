@@ -13,7 +13,7 @@ export default function Navbar() {
 
   return (
     <Box sx={{ width: '100%', bgcolor: 'background.paper'}}>
-      <Tabs value={value} onChange={handleChange} aria-label="nav tabs example" orientation='vertical'>
+      <Tabs value={value} onChange={handleChange} aria-label="nav tabs" orientation='vertical'>
         <Tab component={Link} label="Home" to="/" />
         <Tab component={Link} label="Tasks" to="/tasks" />
       </Tabs>
