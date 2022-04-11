@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {Box,Button, Avatar, Menu, MenuItem, ListItemIcon, Divider, IconButton, Typography, Tooltip, Container, AppBar, Toolbar} from '@mui/material';
+import {Box, Avatar, Menu, MenuItem, ListItemIcon, IconButton, Typography, Tooltip, Container, AppBar, Toolbar} from '@mui/material';
 import {Settings, Logout} from '@mui/icons-material';
 
 const Header = () => {
@@ -12,16 +12,14 @@ const Header = () => {
   const handleClose = () => {
     setAnchorEl(null);
   };
+
   return (
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-            <Typography variant="h6" noWrap component="div" sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}>
+            <Typography variant="h4" noWrap component="div" sx={{ flexGrow: 1, mr: 2, display: { xs: 'none', md: 'flex' } }}>
                 Nokia Challenge
             </Typography>
-            <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-              {/* <Button sx={{ my: 2, color: 'white', display: 'block' }} > </Button> */}
-            </Box>
             <Box sx={{ flexGrow: 0 }}>
                 <Tooltip title="Account settings">
                 <IconButton onClick={handleClick} size="small" sx={{ ml: 2 }} 
@@ -44,10 +42,6 @@ const Header = () => {
                     <MenuItem>
                         <Avatar /> Profile
                     </MenuItem>
-                    <MenuItem>
-                        <Avatar /> My account
-                    </MenuItem>
-                    <Divider />
                     <MenuItem>
                         <ListItemIcon>
                             <Settings fontSize="small" />

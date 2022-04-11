@@ -28,12 +28,18 @@ const Tasks = () => {
             )
       }, [])
     if (error) {
-        return (<div>Error: {error.message}</div>);
+        return (
+        <div>
+            <Grid md={12} container>
+                <h3>Error: {error.message}</h3>
+            </Grid>
+        </div>
+        );
     } else if (!isLoaded) {
         return (
             <div>
                 <div>Loading...</div>
-                <Skeleton animation="wave" variant="rectangular" width={210} height={18} />
+                <Skeleton animation="wave" variant="rectangular" width={360} height={18} />
             </div>
         );
     } else {
